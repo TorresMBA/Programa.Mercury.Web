@@ -1,0 +1,1 @@
+## Este proyecto fue creado con .NET 6 el día 20/10/2022 22:07
