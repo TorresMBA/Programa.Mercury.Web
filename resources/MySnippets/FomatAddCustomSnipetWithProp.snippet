@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+        <!--Información basica para el Custom Snippet-->
+		<Header>
+			<Title>Clase de Prueba con Propiedades Custom</Title>
+            <Author>btorreme</Author>
+            <Description>Fragmento de código para generar una clase basica.</Description>
+            <Shortcut>nttcpc</Shortcut><!--Aca se añadira el atajo de teclado-->
+            <SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+
+        <!--Zonar donde se colocará el codigo-->
+        <Snippet>
+            <!--Si necesita colocar imports al añadir codigo inserte en este bloque-->
+            <Imports>
+                <Import>
+                    <Namespace>System.IO</Namespace>
+                </Import>
+            </Imports>
+
+            <!--Añadir codigo base dentro de este bloque-->
+            <Code Language="csharp">
+                <!--
+                    Añadir codigo base dentro del [] y si se usa "Declarations" usar el ID
+                    donde este será customizable por el usuario
+                -->
+                <![CDATA[
+                    public class $NombreClase${
+                        public int Id {get;set;}
+                        public string $NombrePropiedad$ {get;set;}$end$
+                    }
+                ]]>
+            </Code>
+
+            <!--
+                Zona para hacer mas customizable el fragmento de codigo importado
+                es decir poder cambiar el nombre inicial del codigo que se pego
+            -->
+            <Declarations>
+                <Literal>
+                    <ID>NombreClase</ID>
+                    <Tooltip>Nombre de la clase</Tooltip>
+                    <Default>ClaseBase</Default>
+                </Literal>
+
+                <Literal>
+                    <ID>NombrePropiedad</ID>
+                    <Tooltip>Propiedad de tipo cadena</Tooltip>
+                    <Default>PropiedadBase</Default>
+                </Literal>
+            </Declarations>
+        </Snippet>
+	</CodeSnippet>
+</CodeSnippets>
