@@ -1,6 +1,8 @@
 *.suo
 *.user
 *.sln.docstates
+MercuryWebApp\src\appsettings.Development.json
+MercuryWebApp\src\.vs
 
 # Build results
 [Dd]ebug/
