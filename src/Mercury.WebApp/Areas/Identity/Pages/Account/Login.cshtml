@@ -2,6 +2,7 @@
 @model LoginModel
 
 @{
+        Layout = null;
     ViewData["Title"] = "Iniciar sesión";
 }
 @section Styles {
@@ -11,6 +12,17 @@
     <link rel="stylesheet" href="~/assets/vendor/fonts/fontawesome/css/fontawesome-all.css" asp-append-version="true">
 
 }
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Web.Mercury</title>
+    <link rel="stylesheet" href="~/assets/vendor/bootstrap/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/assets/vendor/fonts/circular-std/style.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/assets/libs/css/style.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/assets/vendor/fonts/fontawesome/css/fontawesome-all.css" asp-append-version="true">
+    
+</head>
 
 
     <div class="splash-container">
@@ -41,13 +53,11 @@
                         </label>
                     </div>
 
-                    <button id="login-submit" type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                    <button id="login-submit" type="submit" class="btn btn-primary btn-lg btn-block">Iniciar sesión</button>
                 </form>
 
             </div>
             <div class="card-footer bg-white p-0  ">
-                <div class="card-footer-item card-footer-item-bordered">
-                    <a href="#" class="footer-link">Crea una cuenta</a></div>
                 <div class="card-footer-item card-footer-item-bordered">
                     <a href="#" class="footer-link">Has olvidado tu contraseña</a>
                 </div>
