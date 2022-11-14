@@ -64,7 +64,7 @@ app.UseAuthentication();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Welcome}/{id?}");
-
+//123
 //Codigo para realizar mapeo de nuestras vistas de Identity
 app.UseEndpoints(enpoints =>
 {
