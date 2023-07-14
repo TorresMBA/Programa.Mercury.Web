@@ -14,6 +14,7 @@ namespace Mercury.Infrastructure
         public DbSet<Articles> Articles { get; set; }
 
         public DbSet<Category> Categories { get; set; }
+       // public DbSet<AppUsuario> AppUsuario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
