@@ -1,0 +1,48 @@
+﻿@using Mercury.Core.Entities;
+@model List<Category>
+@{
+    
+}
+<div class="container-fluid dashboard-content">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <h3 class="text-center">Crud de Categorias</h3>
+        </div>
+    </div>   
+    <div>
+        <div class="card">
+            <h5 class="card-header">Responsive Table</h5>
+            <div class="card-body">
+                <div class="table-responsive ">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">CreatedDate</th>
+                                <th scope="col">CreatedByUser</th>
+                                <th scope="col">ModifiedDate</th>
+                                <th scope="col">ModifiedByUser</th>                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(var category in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@category.Id</th>
+                                    <td>@category.Name</td>
+                                    <td>@category.Description</td>
+                                    <td>@category.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                    <td>@category.CreatedByUser</td>
+                                    <td>@category.ModifiedDate.ToString("dd/MM/yyyy")</td>
+                                    <td>@category.ModifiedByUser</td>
+                                </tr>
+                            }                                                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

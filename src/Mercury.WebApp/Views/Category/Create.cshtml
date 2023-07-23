@@ -1,0 +1,30 @@
+﻿@using Mercury.Core.Entities;
+@model Category
+@{
+}
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+    <div class="card">
+        <h5 class="card-header">Horizontal Form</h5>
+        <div class="card-body">
+            <form id="form" data-parsley-validate="" asp-controller="Category" asp-action="Create" method="post">
+                <div class="form-group row">
+                    <label for="inputEmail2" class="col-3 col-lg-2 col-form-label text-right">Nombre</label>
+                    <div class="col-9 col-lg-10">
+                        <input asp-for="Name" placeholder="Email" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword2" class="col-3 col-lg-2 col-form-label text-right">Descripción</label>
+                    <div class="col-9 col-lg-10">
+                        <input asp-for="Description" placeholder="Password" class="form-control">
+                    </div>
+                </div>                         
+                <div class="col-sm-6 pl-0">
+                    <p class="text-right">
+                        <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
