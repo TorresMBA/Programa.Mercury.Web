@@ -143,10 +143,11 @@
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="~/index.html">E Commerce Dashboard</a>
+                                                        @*<a class="nav-link" asp-page="/Category/Index">Crud Basic</a>*@
+                                                        <a class="nav-link" href="@Url.Action("Index", "Category")">Listado Categoria</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="~/ecommerce-product.html">Product List</a>
+                                                        <a class="nav-link" href="@Url.Action("Create", "Category")">Crear Categoria</a>
                                                     </li>
                                                     <li class="nav-item">
                                                         <a class="nav-link" href="~/ecommerce-product-single.html">Product Single</a>

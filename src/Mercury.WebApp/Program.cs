@@ -1,6 +1,8 @@
 using Mercury.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Mercury.Core.Interfaces;
+using Mercury.Infrastructure.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,12 +14,16 @@ builder.Services.AddDbContext<MercuryContext>(c =>
     c.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
 //    .AddEntityFrameworkStores<MercuryContext>();
 
 #region Configurando Servicio de Identity
 builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<MercuryContext>().AddDefaultTokenProviders();
 #endregion
+
+//
 
 var app = builder.Build();
 
